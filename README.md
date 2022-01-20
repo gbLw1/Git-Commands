@@ -64,7 +64,7 @@ Caso queira ver uma listagem mais simplificada, utilize o parâmetro : ``` --one
 
 ---
 
-## Voltar o estado do último commit
+## Voltando o estado do último commit
 ```
 git clean -df
 git checkout -- .
@@ -72,7 +72,7 @@ git checkout -- .
 
 ---
 
-## Remover o último commit
+## Removendo o último commit
 ```
 git reset --soft HEAD~1
 ```
@@ -80,7 +80,7 @@ Esse comando remove apenas o commit, mantendo as alterações do arquivo em stag
 
 ---
 
-## Remover o commit e alterações do arquivo
+## Removendo o commit e alterações do arquivo
 ```
 git reset --hard HEAD~1
 ```

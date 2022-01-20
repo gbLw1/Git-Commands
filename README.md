@@ -35,14 +35,25 @@ git commit -m "msg"
 ```
 
 ## Commit direto
-Esse é um outro modo de executar o commit, pulando a parte de adicionar para o stage, basta adicionar o parâmetro : ``` -a ```
+  Esse é um outro modo de executar o commit, pulando a parte de adicionar para o stage,  
+  basta adicionar o parâmetro : ``` -a ```
 ```
 git commit -a -m "msg"
 ```
 
+## Alterando o nome da branch (main)
+```
+git branch -M main
+```
+
+## Sincronizando com o repositório remoto
+```
+git remote add origin <URI>
+```
+
 ## Subindo o repositório local para o GitHub
 ```
-git push -u 
+git push -u origin main
 ```
 
 
@@ -56,9 +67,9 @@ git push -u
 git status
 ```
   Neste comando podemos verificar o estado da branch 
-|:red_circle: Untracked|:white_check_mark: Stage|
-|----------------------|------------------------|
-|arquivos não rastreados|arquivos prontos para o commit|
+| :red_circle: Untracked  | :white_check_mark: Stage       |
+| ----------------------- | ------------------------------ |
+| arquivos não rastreados | arquivos prontos para o commit |
 
 ---
 

@@ -1,4 +1,8 @@
-# ```Git```
+# ![Git](https://blog-geek-midia.s3.amazonaws.com/wp-content/uploads/2020/08/06103546/comandos-git.png)
+
+## Essa documentação foi feita com a intenção de introduzir os [Comandos básicos](https://comandosgit.github.io/) em Git
+
+# Começando do zero
 
 ## Configurações de identificação do usuário
 ```
@@ -6,30 +10,69 @@ git config --global user.name "Seu Nome"
 git config --global user.email "Seu Email"
 ```
 
----
-
 ## Inicializando um novo repositório
 ```
 git init
 ```
 
+## Criando o arquivo README.md
+```
+echo "# README" >> README.md
+```
+
+## Adicionando ao stage
+  ``` git add README.md ```
+
+  ou
+
+``` git add . ```
+
+  Para adicionar todos os arquivos pendentes
+
+## Fazendo o commit
+```
+git commit -m "msg"
+```
+
+## Commit direto
+Esse é um outro modo de executar o commit, pulando a parte de adicionar para o stage, basta adicionar o parâmetro : ``` -a ```
+```
+git commit -a -m "msg"
+```
+
+## Subindo o repositório local para o GitHub
+```
+git push -u 
+```
+
+
 ---
 
-## Verificando se há commits pendentes (estado da branch)
+
+# Comandos Adicionais
+
+## Verificando se há commits pendentes
 ```
 git status
 ```
-Neste comando ele irá mostrar os arquivos com os seguintes status :
-  - :red_circle: Vermelho : arquivos não rastreados (untracked)
-  - :white_check_mark: Verde : arquivos prontos para o commit (stage)
+  Neste comando podemos verificar o estado da branch 
+|:red_circle: Untracked|:white_check_mark: Stage|
+|----------------------|------------------------|
+|arquivos não rastreados|arquivos prontos para o commit|
 
 ---
 
-## Adicionando ao stage
+## Visualizar commits anteriores
+  Para esse comando é necessário que **não haja modificações pendentes**, utilize o comando ``` git status ``` para verificar o stage.
+  #### Navegar até o commit, alterando os arquivos temporariamente ↓
 ```
-git add .
+git checkout <código do commit>
 ```
-Adiciona os arquivos para a área de stage (o ponto significa todos os arquivos)
+
+  #### Voltar para o último commit ↓
+```
+git checkout <nome da branch>
+```
 
 ---
 
@@ -37,22 +80,7 @@ Adiciona os arquivos para a área de stage (o ponto significa todos os arquivos)
 ```
 git restore .
 ```
-Use o parâmetro ``` --stage ``` para remover os itens adicionados ao stage.
-
----
-
-## Fazendo um commit
-```
-git commit -m "msg"
-```
-
----
-
-## Fazendo um commit direto (sem passar pelo stage)
-```
-git commit -a -m "msg"
-```
-o parâmetro ```-a``` já adiciona os arquivos pendentes ao stage.
+  Use o parâmetro ``` --stage ``` para remover os itens adicionados ao stage (não será feito o commit).
 
 ---
 
@@ -60,7 +88,7 @@ o parâmetro ```-a``` já adiciona os arquivos pendentes ao stage.
 ```
 git log
 ```
-Caso queira ver uma listagem mais simplificada, utilize o parâmetro : ``` --oneline ```
+  Caso queira ver uma listagem mais simplificada, utilize o parâmetro : ``` --oneline ```
 
 ---
 
@@ -69,6 +97,7 @@ Caso queira ver uma listagem mais simplificada, utilize o parâmetro : ``` --one
 git clean -df
 git checkout -- .
 ```
+  As modificações do arquivo serão alteradas para a versão do último commit, tudo será desfeito.
 
 ---
 
@@ -76,7 +105,7 @@ git checkout -- .
 ```
 git reset --soft HEAD~1
 ```
-Esse comando remove apenas o commit, mantendo as alterações do arquivo em stage
+  Esse comando remove **apenas o commit**, mantendo as alterações do arquivo em stage
 
 ---
 
@@ -84,34 +113,13 @@ Esse comando remove apenas o commit, mantendo as alterações do arquivo em stag
 ```
 git reset --hard HEAD~1
 ```
-Esse comando remove o último commit e todas as alterações feitas no arquivo.
+  Esse comando remove o **último commit e todas as alterações** feitas no arquivo.
 
 ---
 
-## Visualizar commits anteriores
-**Para esse comando é necessário que não haja modificações pendentes, utilize o comando ``` git status ``` para verificar.**
-```
-git checkout <código do commit>
-```
-↑ Navega até o commit, alterando os arquivos temporariamente
-
-```
-git checkout <nome da branch>
-```
-↑ Volta para o último commit
-
----
-
-## Clonando um repositório remoto
+# Clonando um repositório remoto
 ```
 git clone <URI>
-```
-
----
-
-## Subindo o repositório local para o GitHub
-```
-git push
 ```
 
 ---

@@ -132,7 +132,7 @@
   ```
   git clone <URI>
   ```
-  Ou vc pode Simplesmente clonar um repositório, simples assim
+  Ou vc pode Simplesmente clonar um repositório, ez as that
 
 ---
 

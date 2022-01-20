@@ -20,8 +20,8 @@ git init
 git status
 ```
 Neste comando ele irá mostrar os arquivos com os seguintes status :
-  - :red_circle: Vermelho : arquivos não rastreados (untracked)❌
-  - :white_check_mark: Verde : arquivos prontos para o commit (stage)✅
+  - :red_circle: Vermelho : arquivos não rastreados (untracked)
+  - :white_check_mark: Verde : arquivos prontos para o commit (stage)
 
 ---
 
@@ -37,7 +37,7 @@ Adiciona os arquivos para a área de stage (o ponto significa todos os arquivos)
 ```
 git restore .
 ```
-Caso queira ignorar arquivos em seu commit
+Use o parâmetro ``` --stage ``` para remover os itens adicionados ao stage.
 
 ---
 
@@ -45,6 +45,14 @@ Caso queira ignorar arquivos em seu commit
 ```
 git commit -m "msg"
 ```
+
+---
+
+## Fazendo um commit direto (sem passar pelo stage)
+```
+git commit -a -m "msg"
+```
+o parâmetro ```-a``` já adiciona os arquivos pendentes ao stage.
 
 ---
 
@@ -94,17 +102,18 @@ git checkout <nome da branch>
 
 ---
 
-## Associação de um repositório remoto a um repositório local
+## Clonando um repositório remoto
 ```
-git remote add origin <URI>
+git clone <URI>
 ```
-"origin" sendo o apelido do repositório e URI é o link para o repositório
 
 ---
 
 ## Subindo o repositório local para o GitHub
 ```
+git push
 ```
 
+---
 
-:thumbsup: 👍
+:thumbsup:

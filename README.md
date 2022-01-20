@@ -66,7 +66,7 @@
   ```
   git status
   ```
-    Neste comando podemos verificar o estado da branch
+  Neste comando podemos verificar os estados da branch, que são:
   | :red_circle: Untracked  | :white_check_mark: Stage       |
   | ----------------------- | ------------------------------ |
   | arquivos não rastreados | arquivos prontos para o commit |

@@ -87,6 +87,13 @@
 
 ---
 
+## Parar de trackear um arquivo / pasta específica
+  ```
+  git rm --cached <nome do arquivo / pasta>
+  ```
+
+---
+
 ## Ignorando arquivos pendentes
   ```
   git restore .

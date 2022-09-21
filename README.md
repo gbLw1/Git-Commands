@@ -132,7 +132,8 @@
   git reset --hard HEAD~1
   ```
   Esse comando remove o **último commit e todas as alterações** feitas no arquivo.
-
+  Necessário fazer um push para atualizar a branch → ```git push -f```
+  
 ---
 
 # Clonando um repositório remoto

@@ -6,11 +6,11 @@
 
 # Sumário
 
-  - #### [Começando do zero](#começando-do-zero)
-  - #### [Trabalhando com Stash](#trabalhando-com-stash)
-  - #### [Manipulação de commits](#manipulação-de-commits)
-  - #### [Rollback de commits](#rollback-de-commits)
-  - #### [Outros comandos](#outros-comandos)
+  - [Começando do zero](#começando-do-zero)
+  - [Trabalhando com Stash](#trabalhando-com-stash)
+  - [Manipulação de commits](#manipulação-de-commits)
+  - [Rollback de commits](#rollback-de-commits)
+  - [Outros comandos](#outros-comandos)
 
  ---
 

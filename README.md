@@ -2,6 +2,18 @@
 
 ## Essa documentação foi feita com a intenção de introduzir os [Comandos básicos](https://comandosgit.github.io/) em Git
 
+ ---
+
+# Sumário
+
+  - #### [Começando do zero](#começando-do-zero)
+  - #### [Trabalhando com Stash](#trabalhando-com-stash)
+  - #### [Manipulação de commits](#manipulação-de-commits)
+  - #### [Rollback de commits](#rollback-de-commits)
+  - #### [Outros comandos](#outros-comandos)
+
+ ---
+
 # Começando do zero
 
   ### 1. Configurações de identificação do usuário
@@ -21,7 +33,7 @@
   ```
   git clone <URI>
   ```
-  **Obs.:** Não é necessário fazer os Passos [6](6-sincronizando-com-o-repositório-remoto) e [7](#7-alterando-o-nome-da-branch-main).
+  **Obs.:** Não é necessário fazer os Passos [6](#6-sincronizando-com-o-repositório-remoto) e [7](#7-alterando-o-nome-da-branch-main).
 
  ---
 

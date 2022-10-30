@@ -33,7 +33,7 @@
   ```
   git clone <URI>
   ```
-  **Obs.:** Não é necessário fazer os Passos [6](#6-sincronizando-com-o-repositório-remoto) e [7](#7-alterando-o-nome-da-branch-main).
+  :orange_circle: **Obs.:** Não é necessário fazer os Passos [6](#6-sincronizando-com-o-repositório-remoto) e [7](#7-alterando-o-nome-da-branch-main).
 
  ---
 
@@ -61,7 +61,7 @@
   git commit -m "msg"
   ```
   - #### Stage + commit em um único comando
-      Esse é um outro modo de executar o commit, pulando a parte de adicionar para o stage,  
+      Esse é um outro modo de executar o commit, pulando a parte de [adicionar para o stage](#4-adicionando-ao-stage),  
       basta adicionar o parâmetro : ``` -a ```
   ```
   git commit -a -m "msg"
@@ -158,8 +158,8 @@
   git status
   ```
   Neste comando podemos verificar os estados da branch, que são:
-  | :red_circle: Untracked  | :white_check_mark: Stage       |
-  | ----------------------- | ------------------------------ |
+  | :x: Untracked           | :white_check_mark: Stage       |
+  |-------------------------|--------------------------------|
   | arquivos não rastreados | arquivos prontos para o commit |
 
  ---
@@ -230,4 +230,7 @@
  ---
 
 # Blaw
-  ![xD](https://c.tenor.com/pcCWcPVLXqgAAAAM/tf2dance.gif)
+
+  |                                                              |
+  |--------------------------------------------------------------|
+  | : ![xD](https://c.tenor.com/pcCWcPVLXqgAAAAM/tf2dance.gif) : |

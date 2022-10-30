@@ -3,7 +3,7 @@
 ## Essa documentação foi feita com a intenção de introduzir os [Comandos básicos](https://comandosgit.github.io/) em Git
 
 # Começando do zero
-  [Blaw](#blaw)
+
   ### 1. Configurações de identificação do usuário
   ```
   git config --global user.name "Seu Nome"
@@ -21,7 +21,7 @@
   ```
   git clone <URI>
   ```
-  Obs.: Não é necessário fazer os Passos [6](#6.sincronizando-com-o-repositório-remoto) e [7](#7.alterando-o-nome-da-branch-(main)).
+  **Obs.:** Não é necessário fazer os Passos [6](6-sincronizando-com-o-repositório-remoto) e [7](#7-alterando-o-nome-da-branch-main).
 
  ---
 
@@ -99,7 +99,7 @@
   ```
   git stash apply
   ```
-  Obs.: Uma vez que foi aplicado o stash mais recente, não é possível ir para um stash antigo (stash checkout).  
+  **Obs.:** Uma vez que foi aplicado o stash mais recente, não é possível ir para um stash antigo (stash checkout).  
     Sendo necessário criar mais um stash para que consiga aplicar um específico com o comando:
   ```
   git stash apply <stash_index>
@@ -139,9 +139,9 @@
 
  ---
 
-# Comandos Adicionais
+# Manipulação de commits
 
-  ## Verificando se há commits pendentes
+  ### Verificando se há alterações pendentes
   ```
   git status
   ```
@@ -152,7 +152,7 @@
 
  ---
 
-  ## Visualizar histórico de commits
+  ### Visualizar histórico de commits
   ```
   git log
   ```
@@ -160,63 +160,62 @@
 
  ---
 
-  ## Navegar até um commit específico
-    Para esse comando é necessário que **não haja modificações pendentes**, utilize o comando ``` git status ``` para verificar o stage.
-    ```
-    git checkout <código do commit>
-    ```
+  ### Navegar até um commit específico
+  ```
+  git checkout <código do commit>
+  ```
+  **Obs.:** Para esse comando é necessário que **não haja modificações pendentes**, utilize o comando ``` git status ``` para verificar o stage.
 
  ---
 
-  ## Voltar para o último commit
-    ```
-    git checkout <nome da branch>
-    ```
+  ### Voltar para o último commit
+  ```
+  git checkout <nome da branch>
+  ```
 
  ---
 
-## Parar de trackear um arquivo / pasta específica
+# Rollback de commits
+
+  ### Deletando todas as alterações
+  ```
+  git reset --hard
+  ```
+
+ ---
+
+  ### Deletando todas as alterações e os Commits
+  ```
+  git reset --hard HEAD~1
+  ```
+  :red_circle: **Obs.:** o número após o "~" é a quantiade de commits afetados, se omitido será apenas o último commit.  
+  Necessário fazer um push para atualizar a branch: ```git push -f```
+
+ ---
+
+  ### Deletando apenas o commit e mantendo as alterações
+  ```
+  git reset --soft HEAD~1
+  ```
+  :yellow_circle: **Obs.:** Esse comando deleta e volta o número de commits informado após o "~", mantendo todas as alterações em stage.
+
+ ---
+
+# Outros comandos
+
+  ### Parar de trackear um arquivo / pasta específica
   ```
   git rm --cached <nome do arquivo / pasta>
   ```
 
  ---
 
-## Ignorando arquivos pendentes
+  ### Removendo arquivos com alterações do stage
   ```
-  git restore .
+  git restore . --stage
   ```
-  Use o parâmetro ``` --stage ``` para remover os itens adicionados ao stage (não será feito o commit).
 
  ---
 
-## Voltando o estado do último commit
-  ```
-  git clean -df
-  git checkout -- .
-  ```
-  As modificações do arquivo serão alteradas para a versão do último commit, tudo será desfeito.
-
- ---
-
-## Removendo o último commit
-  ```
-  git reset --soft HEAD~1
-  ```
-  Esse comando remove **apenas o commit**, mantendo as alterações do arquivo em stage
-
- ---
-
-## Removendo o commit e alterações do arquivo
-  ```
-  git reset --hard HEAD~1
-  ```
-  Esse comando remove o **último commit e todas as alterações** feitas no arquivo.  
-  Necessário fazer um push para atualizar a branch → ```git push -f```
-
- ---
-
- ---
-
-  ### Blaw
+# Blaw
   ![xD](https://c.tenor.com/pcCWcPVLXqgAAAAM/tf2dance.gif)

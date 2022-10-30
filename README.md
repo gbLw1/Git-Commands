@@ -4,23 +4,23 @@
 
 # Começando do zero
 
-1. ## Configurações de identificação do usuário
+  1. ## Configurações de identificação do usuário
     ```
     git config --global user.name "Seu Nome"
     git config --global user.email "Seu Email"
     ```
 
-2. ## Inicializando um novo repositório
+  2. ## Inicializando um novo repositório
     ```
     git init
     ```
 
-3. ## Criando o arquivo README.md
+  3. ## Criando o arquivo README.md
     ```
     echo "# README" >> README.md
     ```
 
-4. ## Adicionando ao stage
+  4. ## Adicionando ao stage
     ``` git add README.md ```
 
     ou
@@ -29,7 +29,7 @@
 
     Para adicionar todos os arquivos pendentes
 
-5. ## Fazendo o commit
+  5. ## Fazendo o commit
     ```
     git commit -m "msg"
     ```
@@ -41,46 +41,96 @@
       git commit -a -m "msg"
       ```
 
-1. ## Sincronizando com o repositório remoto
+  6. ## Sincronizando com o repositório remoto
     ```
     git remote add origin <URI>
     ```
 
-2. ## Alterando o nome da branch (main)
+  7. ## Alterando o nome da branch (main)
     ```
     git branch -M main
     ```
 
-3. ## Subindo o repositório local para o GitHub
+  8. ## Subindo o repositório local para o GitHub
     ```
     git push -u origin main
     ```
 
+ ---
 
----
+# Trabalhando com Stash
 
+  ## Criando um stash
+    Guarda as últimas alterações em um stash local e retorna o estado do ultimo commit
+    ```
+    git stash
+    ```
+
+  ## Criando um stash com descrição
+    ```
+    git stash push -m "msg"
+    ```
+
+  ## Aplicando stash criado na branch atual
+    ```
+    git stash apply
+    ```
+    Uma vez que foi aplicado o stash mais recente, não é possível ir para um stash antigo (stash checkout).  
+    Sendo necessário criar mais um stash para que consiga aplicar um específico com o comando:
+    ```
+    git stash apply <stash_index>
+    ```
+
+  ## Listando stashes criados
+    ```
+    git stash list
+    ```
+
+  ## Deletando um stash específico
+    ```
+    git stash drop <stash_index>
+    ```
+
+  ## Aplicando stash na branch atual e deletando o stash
+    ```
+    git stash pop
+    ```
+    Ou também pode selecionar um stash específico com o comando:
+    ```
+    git stash pop <stash_index>
+    ```
+
+  ## Limpando os stashes
+    ```
+    git stash clear
+    ```
+
+ ---
 
 # Comandos Adicionais
 
-## Verificando se há commits pendentes
-  ```
-  git status
-  ```
-  Neste comando podemos verificar os estados da branch, que são:
-  | :red_circle: Untracked  | :white_check_mark: Stage       |
-  | ----------------------- | ------------------------------ |
-  | arquivos não rastreados | arquivos prontos para o commit |
+  ## Verificando se há commits pendentes
+    ```
+    git status
+    ```
+    Neste comando podemos verificar os estados da branch, que são:
+    | :red_circle: Untracked  | :white_check_mark: Stage       |
+    | ----------------------- | ------------------------------ |
+    | arquivos não rastreados | arquivos prontos para o commit |
 
----
+  ## Visualizar histórico de commits
+    ```
+    git log
+    ```
+    Caso queira ver uma listagem mais simplificada, utilize o parâmetro : ``` --oneline ```
 
-## Visualizar commits anteriores
-  Para esse comando é necessário que **não haja modificações pendentes**, utilize o comando ``` git status ``` para verificar o stage.
-  - ### Navegar até o commit, alterando os arquivos temporariamente
+  ## Navegar até um commit específico
+    Para esse comando é necessário que **não haja modificações pendentes**, utilize o comando ``` git status ``` para verificar o stage.
     ```
     git checkout <código do commit>
     ```
 
-  - ### Voltar para o último commit
+  ## Voltar para o último commit
     ```
     git checkout <nome da branch>
     ```

@@ -111,8 +111,8 @@
   ```
   git stash apply
   ```
-  **Obs.:** Uma vez que foi aplicado o stash mais recente, não é possível ir para um stash antigo (stash checkout).  
-    Sendo necessário criar mais um stash para que consiga aplicar um específico com o comando:
+  **Obs.:** Uma vez que foi aplicado o stash, não é possível alterar para outro.  
+    Sendo necessário criar mais um stash para que consiga fazer o checkout em um específico com o comando:
   ```
   git stash apply <stash_index>
   ```
